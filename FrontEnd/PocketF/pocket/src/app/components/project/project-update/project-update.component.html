@@ -1,0 +1,67 @@
+<div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWidth">Update Project</h1>
+    <img class="fullWidth" src="assets/img/area-create.jpg" alt="Update Project">
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+        [(ngModel)]="project.name"
+        name="name"
+        [formControl]="name"
+        required
+        matInput
+        placeholder="Ex:.Finances">
+        <mat-icon matSuffix>work</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>Start Date</mat-label>
+        <input
+        [(ngModel)]="project.startDate"
+        name="startDate"
+        [disabled]="true"
+
+        required
+        matInput
+        placeholder="Ex:.2024-12-25" mask="0000-00-00">
+        <mat-icon matSuffix>calendar_month</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>End Date</mat-label>
+        <input
+        [(ngModel)]="project.endDate"
+        name="endDate"
+        [formControl]="endDate"
+        required
+        matInput
+        placeholder="Ex:.2024-12-25" mask="0000-00-00">
+        <mat-icon matSuffix>calendar_month</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>Area Id</mat-label>
+        <input
+        [(ngModel)]="project.areaId"
+        name="areaId"
+        [formControl]="area"
+        required
+        matInput
+        placeholder="Ex:.1">
+        <mat-icon matSuffix>crop</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <button (click)="update()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Update</button>
+    <button type="button" (click)="cancelar()" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+
+  </form>
+</div>

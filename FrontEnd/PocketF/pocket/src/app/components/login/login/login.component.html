@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="form mat-elevation-z8">
+
+    <h1>Pocket - Login</h1>
+
+    <img src="assets/img/login.jpg" alt="Login">
+
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input
+      [formControl]="email"
+      required
+      [(ngModel)] ="creds.email"
+      name="email"
+      matInput
+      placeholder="Ex. james@sapo.pt">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Password</mat-label>
+      <input
+       [formControl]="senha"
+       required
+       [(ngModel)] ="creds.senha"
+       name="senha"
+       type="password"
+       matInput
+       placeholder="Ex. 123">
+    </mat-form-field>
+
+
+      <button (click)="onLogin()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
+
+      <div class="link-container">
+        <a routerLink="/register" class="register-link">Register</a>
+      </div>
+
+          <!--{{creds.email}}-->
+  </form>
+</div>

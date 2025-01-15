@@ -1,0 +1,18 @@
+.card {
+  width: 39%;
+  margin: 1rem auto;
+  background-color: rgb(235, 235, 235);
+}
+
+img {
+  height: 30rem;
+}
+
+.header, .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+

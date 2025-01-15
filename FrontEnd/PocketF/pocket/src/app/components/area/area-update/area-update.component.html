@@ -1,0 +1,39 @@
+<div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWidth">Update Area</h1>
+    <img class="fullWidth" src="assets/img/area-create.jpg" alt="Criar Area">
+
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+        [(ngModel)]="area.name"
+        name="name"
+        [formControl]="name"
+        required
+        matInput
+        placeholder="Ex:.Finances">
+        <mat-icon matSuffix>screenshot_region</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="fullWidth" appearance="fill">
+        <mat-label>Description</mat-label>
+        <input
+        [(ngModel)]="area.description"
+        name="description"
+        [formControl]="description"
+        required
+        matInput
+        placeholder="Ex:.Santader Bank">
+        <mat-icon matSuffix>description</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <button (click)="update()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Update</button>
+    <button type="button" (click)="cancelar()" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+
+  </form>
+</div>
